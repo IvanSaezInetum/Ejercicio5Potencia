@@ -6,9 +6,10 @@ pipeline {
         stage('Calculadora') {
             steps {
                 script {
-                     def suma = num1 + num2
+                     def multiplicacion = num1 * num2
+                    def suma = num1 + num2
                 def potencia = suma**2
-                def info = "La suma de " + num1 + " + " + num2 + " es " + suma + " y la potencia de la suma es " + potencia
+                def info = "La multiplicación de " + num1 + " * " + num2 + " es " + suma + " y la potencia de la suma es " + potencia
                 
                 writeFile(file: "salida.txt", text: info)
                 def read = readFile(file: "salida.txt")
